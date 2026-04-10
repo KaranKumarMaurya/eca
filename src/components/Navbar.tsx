@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X, Heart, Sprout } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -21,7 +21,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <Heart className="w-5 h-5 text-primary-foreground" />
+              <Sprout className="h-5 w-5 text-primary-foreground" strokeWidth={2} aria-hidden />
             </div>
             <span className="text-xl font-heading font-bold text-foreground">
               Education and Climate Advocacy

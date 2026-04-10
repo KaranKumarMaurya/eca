@@ -1,53 +1,71 @@
 import { Link } from "react-router-dom";
+import { ArrowRight, Handshake } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 const partners = [
-  "Local Schools", "Refugee Youth Groups", "Women-Led Associations", "Farmers Cooperatives",
-  "Community Health Volunteers", "Climate Action Clubs", "Faith-Based Networks", "County Stakeholders",
+  "Local schools",
+  "Refugee youth groups",
+  "Women-led associations",
+  "Farmers cooperatives",
+  "Community health volunteers",
+  "Climate action clubs",
+  "Faith-based networks",
+  "County stakeholders",
 ];
 
 const PartnersSection = () => {
   return (
-    <section className="section-padding bg-card border-t border-border">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <p className="text-muted-foreground text-sm font-medium tracking-widest uppercase mb-4">
-            Community Partners & Supporters
+    <section className="section-padding border-t border-border bg-gradient-to-b from-card to-background">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-12 text-center md:mb-14">
+          <p className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+            Ecosystem
           </p>
-          <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground">
-            Working With Local Change-Makers
+          <h2 className="mt-3 font-heading text-2xl font-bold text-foreground md:text-4xl">
+            Working with local change-makers
           </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+            ECA doesn&apos;t work alone—these are the kinds of groups and networks we learn alongside in
+            Turkana West.
+          </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           {partners.map((partner) => (
             <div
               key={partner}
-              className="flex items-center justify-center h-24 rounded-xl bg-background border border-border hover:border-primary/20 hover:shadow-sm transition-all duration-300"
+              className="flex min-h-[5.5rem] items-center justify-center rounded-2xl border border-border/80 bg-background px-4 py-4 text-center shadow-sm transition hover:border-primary/30 hover:shadow-md"
             >
-              <span className="text-muted-foreground font-heading font-semibold text-lg">
+              <span className="font-heading text-sm font-semibold leading-snug text-foreground md:text-base">
                 {partner}
               </span>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 bg-primary rounded-2xl p-10 md:p-16 text-center">
-          <h3 className="text-2xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">
-            Ready to Make a Difference?
+        <div className="relative mt-14 overflow-hidden rounded-3xl border border-primary/20 bg-primary p-8 text-center shadow-xl md:p-12">
+          <div
+            className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-secondary/20 blur-3xl"
+            aria-hidden
+          />
+          <Handshake className="mx-auto mb-4 h-10 w-10 text-secondary" strokeWidth={1.25} aria-hidden />
+          <h3 className="font-heading text-2xl font-bold text-primary-foreground md:text-3xl">
+            Want to collaborate?
           </h3>
-          <p className="text-primary-foreground/70 max-w-lg mx-auto mb-8 text-lg">
-            Join thousands of supporters who are changing the world, 
-            one community at a time.
+          <p className="mx-auto mt-3 max-w-lg text-primary-foreground/80">
+            Tell us who you represent and what you hope to build—we&apos;ll respond with clear next
+            steps and honest questions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="px-6 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-secondary w-full sm:w-80"
-            />
-            <Link to="/contact" className="px-8 py-3 rounded-lg bg-secondary text-secondary-foreground font-semibold hover:bg-secondary/90 transition-colors">
-              Subscribe
+          <Button
+            asChild
+            size="lg"
+            className="mt-8 bg-secondary text-secondary-foreground shadow-lg hover:bg-secondary/90"
+          >
+            <Link to="/contact" className="gap-2">
+              Start a partnership inquiry
+              <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
-          </div>
+          </Button>
         </div>
       </div>
     </section>
