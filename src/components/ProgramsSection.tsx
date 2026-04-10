@@ -1,9 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import educationImg from "@/assets/education-program.jpg";
 import waterImg from "@/assets/water-program.jpg";
 import healthImg from "@/assets/health-program.jpg";
-import communityImg from "@/assets/community-program.jpg";
+import communityImg from "@/assets/mission.jpg";
 
 const programs = [
   {
@@ -65,7 +66,7 @@ const ProgramsSection = () => {
                 index % 2 === 1 ? "lg:direction-rtl" : ""
               }`}
             >
-              <div className={`relative rounded-2xl overflow-hidden group ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+              <div className={`relative rounded-2xl overflow-hidden group shadow-xl shadow-black/10 ring-1 ring-border/40 ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                 <img
                   src={program.image}
                   alt={program.title}
@@ -91,9 +92,11 @@ const ProgramsSection = () => {
                 <p className="text-sm font-semibold text-primary mb-6">
                   {program.stats}
                 </p>
-                <Button variant="outline" className="group/btn">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                <Button asChild variant="outline" className="group/btn">
+                  <Link to="/programs">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
               </div>
             </div>

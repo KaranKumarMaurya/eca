@@ -1,12 +1,12 @@
 import { Users, Droplets, GraduationCap, Stethoscope, Home, Globe } from "lucide-react";
 
 const stats = [
-  { icon: Users, number: "2,500,000+", label: "Lives Impacted", description: "People directly benefiting from our programs worldwide" },
-  { icon: Droplets, number: "1,200+", label: "Wells Built", description: "Clean water sources installed in water-scarce regions" },
-  { icon: GraduationCap, number: "85,000+", label: "Students Educated", description: "Children receiving quality education through our schools" },
-  { icon: Stethoscope, number: "500,000+", label: "Medical Treatments", description: "Healthcare consultations and treatments provided" },
-  { icon: Home, number: "3,200+", label: "Homes Built", description: "Safe, permanent housing constructed for families" },
-  { icon: Globe, number: "42", label: "Countries Served", description: "Nations where our programs are actively running" },
+  { icon: Users, number: "100+", label: "Youth Trained", description: "Young people equipped with practical life and leadership skills" },
+  { icon: Droplets, number: "30+", label: "Schools Reached", description: "Schools supported through education and community programs" },
+  { icon: GraduationCap, number: "5,000+", label: "Lives Impacted", description: "Community members reached across Kakuma and Turkana West" },
+  { icon: Stethoscope, number: "3", label: "Core Programs", description: "Education, climate action, and livelihood strengthening" },
+  { icon: Home, number: "1", label: "County Focus", description: "Serving communities in Turkana West County, Kenya" },
+  { icon: Globe, number: "100%", label: "Community Driven", description: "Programs designed with and for local communities" },
 ];
 
 const ImpactStats = () => {
@@ -21,8 +21,8 @@ const ImpactStats = () => {
             Numbers That Tell <span className="italic">Our Story</span>
           </h2>
           <p className="text-primary-foreground/70 max-w-2xl mx-auto text-lg">
-            Every number represents real lives changed, real communities transformed, 
-            and real hope restored. Here's the impact we've made together.
+            These numbers reflect community-led progress in education, resilience,
+            and sustainable livelihoods across the region.
           </p>
         </div>
 

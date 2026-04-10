@@ -130,4 +130,22 @@
       hsla(160, 30%, 10%, 0.85) 100%
     );
   }
+
+  .testimonial-track {
+    animation: testimonial-scroll 24s linear infinite;
+    will-change: transform;
+  }
+
+  .testimonial-track:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes testimonial-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
 }

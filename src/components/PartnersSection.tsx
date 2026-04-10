@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 const partners = [
-  "United Nations", "World Health Organization", "UNICEF", "Red Cross",
-  "World Bank", "Gates Foundation", "USAID", "Oxfam",
+  "Local Schools", "Refugee Youth Groups", "Women-Led Associations", "Farmers Cooperatives",
+  "Community Health Volunteers", "Climate Action Clubs", "Faith-Based Networks", "County Stakeholders",
 ];
 
 const PartnersSection = () => {
@@ -9,10 +10,10 @@ const PartnersSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-muted-foreground text-sm font-medium tracking-widest uppercase mb-4">
-            Trusted Partners & Supporters
+            Community Partners & Supporters
           </p>
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground">
-            Working With World-Class Organizations
+            Working With Local Change-Makers
           </h2>
         </div>
 
@@ -43,9 +44,9 @@ const PartnersSection = () => {
               placeholder="Enter your email"
               className="px-6 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-secondary w-full sm:w-80"
             />
-            <button className="px-8 py-3 rounded-lg bg-secondary text-secondary-foreground font-semibold hover:bg-secondary/90 transition-colors">
+            <Link to="/contact" className="px-8 py-3 rounded-lg bg-secondary text-secondary-foreground font-semibold hover:bg-secondary/90 transition-colors">
               Subscribe
-            </button>
+            </Link>
           </div>
         </div>
       </div>

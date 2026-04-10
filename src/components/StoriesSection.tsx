@@ -6,27 +6,27 @@ import story3 from "@/assets/story-3.jpg";
 const stories = [
   {
     image: story1,
-    name: "Maria Santos",
-    location: "Philippines",
+    name: "Amina Hassan",
+    location: "Kakuma",
     quote:
-      "Before HopeBridge came to our village, I had to walk 3 hours every day to fetch water. Now, with the well they built, my children can go to school instead of carrying water. Our whole community has been transformed.",
-    program: "Clean Water",
-  },
-  {
-    image: story2,
-    name: "Amara Osei",
-    location: "Ghana",
-    quote:
-      "I was the first girl in my family to attend school, thanks to the HopeBridge scholarship. Now I'm studying to become a doctor so I can come back and serve my community. Education changed everything for me.",
+      "ECA's education program transformed my children's lives. They now have access to quality learning in a safe and supportive environment. I am grateful for everything this organization does for our community.",
     program: "Education",
   },
   {
-    image: story3,
-    name: "Raj Patel",
-    location: "India",
+    image: story2,
+    name: "Sarah Mitchell",
+    location: "Volunteer",
     quote:
-      "The agricultural training program taught me sustainable farming techniques that tripled my harvest. I can now feed my family and sell the surplus at market. We went from surviving to thriving.",
-    program: "Community Development",
+      "My experience volunteering with ECA in Kakuma was life-changing. The team was welcoming, organized, and passionate about their mission. They truly value their volunteers and I felt empowered to contribute my skills.",
+    program: "Community Support",
+  },
+  {
+    image: story3,
+    name: "Community Voices",
+    location: "Turkana West County",
+    quote:
+      "Through ECA's climate and livelihood initiatives, families are building resilience and restoring dignity. Youth and women are gaining practical skills that strengthen both income and food security.",
+    program: "Livelihoods",
   },
 ];
 
@@ -39,7 +39,7 @@ const StoriesSection = () => {
             Impact Stories
           </p>
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Voices of <span className="italic text-primary">Hope</span>
+            Voices of <span className="italic text-primary">Impact</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
             Behind every statistic is a human story. Meet some of the incredible 
@@ -51,7 +51,7 @@ const StoriesSection = () => {
           {stories.map((story) => (
             <div
               key={story.name}
-              className="bg-background rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-shadow duration-300"
+              className="bg-background rounded-2xl overflow-hidden border border-border hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
             >
               <div className="relative">
                 <img
